@@ -21,45 +21,41 @@
     <meta name="twitter:image" content="/imgs/twtr.jpeg">
     <title>karolisk</title>
     <link rel="icon" href="/imgs/3d-obj-svgrepo-com.png" type="image/png">
+    <style>
+      .hero {
+        background: url("/imgs/bckgrd.jpeg")
+          no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        transform-origin: bottom center;
+        transition: transform 0.1s ease-out;
+      }
+  
+      .content {
+        background: url("/imgs/magicpattern-noise-1724172903512.png")
+          no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        top: 80vh;
+      }
+  
+      :root {
+          color-scheme: dark;
+      }
+  
+      #slide-content {
+        transition: opacity 0.5s ease-in-out;
+      }
+    </style>
     <link rel="stylesheet" href="build.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"></noscript>
   </head>
-  <style>
-    .hero {
-      background: url("/imgs/bckgrd.jpeg")
-        no-repeat center center;
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 80vh;
-      transform-origin: bottom center;
-      transition: transform 0.1s ease-out;
-    }
-
-    .content {
-      background: url("/imgs/magicpattern-noise-1724172903512.png")
-        no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      display: flex;
-      top: 80vh;
-    }
-
-    :root {
-        color-scheme: dark;
-    }
-
-    #slide-content {
-      transition: opacity 0.5s ease-in-out;
-    }
-  </style>
   <body class="font-inter">
     <nav class="fixed top-0 left-0 w-full z-50 bg-cover bg-center py-3 border-neutral-500 border-b-[1.5px] border-dashed" style="background-image: url('/imgs/magicpattern-noise-1724172903512.png')">
       <div class="flex items-center justify-between mx-20 lg:mx-40">
@@ -69,7 +65,7 @@
     </nav>
     <div class="hero flex justify-center flex-col items-center">
       <div class="flex flex-col items-center justify-end w-full h-3/5">
-        <h1 class="lg:text-5xl md:text-4xl text-3xl text-neutral-100 text-center w-[20rem] md:w-[30rem] lg:w-[50rem] tracking-tight">fullstack tinklalapių kūrimas, dirbtinio intelekto crm sistemos</h1>
+        <h1 class="lg:text-5xl text-4xl text-neutral-100 text-center w-[20rem] md:w-[30rem] lg:w-[50rem] tracking-tight">fullstack tinklalapių kūrimas, dirbtinio intelekto crm sistemos</h1>
         <div class="flex items-center">
           <img src="/imgs/3d-obj-svgrepo-com.png" alt="karolisk logo" class="size-8">
           <h1 class="">karolisk</h1>
