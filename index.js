@@ -56,7 +56,7 @@ function stopAutoChange() {
   clearInterval(autoChangeInterval);
 }
 
-document.getElementById("next-slide").addEventListener("click", () => {
+document.getElementById("next-slide")?.addEventListener("click", () => {
   stopAutoChange();
   nextSlide();
   startAutoChange();
@@ -77,9 +77,11 @@ prevSlideButtons.forEach(button => {
 
 // ... rest of the code ...
 
-// Start the initial slide and auto-change
-updateSlide();
-startAutoChange();
+// Start the initial slide and auto-change when the slideshow is enabled.
+if (slides.length > 0) {
+  updateSlide();
+  startAutoChange();
+}
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
@@ -88,7 +90,7 @@ buttons.forEach(button => {
   });
 });
 
-closePopup.addEventListener('click', () => {
+closePopup?.addEventListener('click', () => {
   popup.classList.add('hidden');
   popup.classList.remove('flex');
 });
@@ -102,7 +104,7 @@ function scrollToBottom() {
 }
 
 // Add this new event listener
-contactBtn.addEventListener('click', scrollToBottom);
+contactBtn?.addEventListener('click', scrollToBottom);
 
 function scrollToTop() {
   window.scrollTo({
@@ -111,7 +113,7 @@ function scrollToTop() {
   });
 }
 
-homeBtn.addEventListener('click', scrollToTop);
+homeBtn?.addEventListener('click', scrollToTop);
 
 // Add this new function
 function scrollHalfPage() {
@@ -123,14 +125,14 @@ function scrollHalfPage() {
 }
 
 // Add this new event listener
-toliau.addEventListener('click', scrollHalfPage);
+toliau?.addEventListener('click', scrollHalfPage);
 
-demo_nuotraukos_1.addEventListener('click', () => {
+demo_nuotraukos_1?.addEventListener('click', () => {
   popup_projektai_1.classList.remove('hidden');
   popup_projektai_1.classList.add('flex');
 });
 
-close_popup_projektai_1.addEventListener('click', () => {
+close_popup_projektai_1?.addEventListener('click', () => {
   popup_projektai_1.classList.add('hidden');
   popup_projektai_1.classList.remove('flex');
 });
@@ -167,12 +169,12 @@ function closeImagePopup() {
   imagePopup.classList.remove('flex');
 }
 
-demo_nuotraukos_2.addEventListener('click', () => {
+demo_nuotraukos_2?.addEventListener('click', () => {
   popup_projektai_2.classList.remove('hidden');
   popup_projektai_2.classList.add('flex');
 });
 
-close_popup_projektai_2.addEventListener('click', () => {
+close_popup_projektai_2?.addEventListener('click', () => {
   popup_projektai_2.classList.add('hidden');
   popup_projektai_2.classList.remove('flex');
 });
